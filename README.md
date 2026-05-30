@@ -32,15 +32,17 @@ Writes go through the `memory` tool API (not raw `cat > file`) so Hermes' atomic
 ## Install
 
 ```bash
-hermes skills tap add MaketheFoxRush/hermes-consolidate-memory
-hermes skills install consolidate-memory
+hermes skills install MaketheFoxRush/hermes-consolidate-memory/consolidate-memory
 ```
 
-Or clone manually into your skills directory:
+The identifier follows Hermes' `owner/repo/skill-name` convention. Hermes fetches the SKILL.md, runs a security scan, and installs it into `~/.hermes/.hub/`.
+
+Or clone manually if you prefer:
 
 ```bash
-git clone https://github.com/MaketheFoxRush/hermes-consolidate-memory.git \
-  ~/.hermes/skills/maintenance/consolidate-memory
+git clone https://github.com/MaketheFoxRush/hermes-consolidate-memory.git
+cp -r hermes-consolidate-memory/skills/consolidate-memory \
+  ~/.hermes/skills/maintenance/
 ```
 
 Verify it loaded:
@@ -121,15 +123,17 @@ skill 做的是**合并**，不是**删除独特信息**。三层守护：
 ### 安装
 
 ```bash
-hermes skills tap add MaketheFoxRush/hermes-consolidate-memory
-hermes skills install consolidate-memory
+hermes skills install MaketheFoxRush/hermes-consolidate-memory/consolidate-memory
 ```
+
+标识符格式是 hermes 的 `owner/repo/skill-name` 约定。hermes 会 fetch SKILL.md、跑安全扫描、装到 `~/.hermes/.hub/`。
 
 或手动 clone：
 
 ```bash
-git clone https://github.com/MaketheFoxRush/hermes-consolidate-memory.git \
-  ~/.hermes/skills/maintenance/consolidate-memory
+git clone https://github.com/MaketheFoxRush/hermes-consolidate-memory.git
+cp -r hermes-consolidate-memory/skills/consolidate-memory \
+  ~/.hermes/skills/maintenance/
 ```
 
 ### 用法
